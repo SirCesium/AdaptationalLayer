@@ -1,4 +1,5 @@
 from SQlite_AdaptationLayer import SQlite_AdaptationLayer
+
 db_path = 'D:/SQlite/test.db'
 SQlite_test = SQlite_AdaptationLayer(db_path)
 
