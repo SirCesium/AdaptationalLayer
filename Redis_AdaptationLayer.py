@@ -1,13 +1,10 @@
 import redis
-
 # r = redis.Redis(host='localhost', port=6379, db=0)
-#
 # value = r.get('aa')
 # print(value)
-#
 # string_value = value.decode('utf-8')
 # print(string_value)
-
+# 2-7行可忽略
 class Redis_AdaptationLayer:
     def __init__(self,host,port,db):
         self.host = host
