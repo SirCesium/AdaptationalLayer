@@ -9,9 +9,12 @@ import redis
 # print(string_value)
 
 class Redis_AdaptationLayer:
-    def __init__(self, host='localhost', port=6379, db=0):
-        self.connection = redis.Redis(host=host, port=port, db=db)
-
+    def __init__(self,host,port,db):
+        self.host = host
+        self.port = port
+        self.db = db
+        self.connection = redis.Redis(host=self.host, port=self.port, db=self.db)
+        
     def insert(self, *args, **kwargs):
         if len(args) == 1 and isinstance(args[0], dict):
             self.connection.mset(args[0])
